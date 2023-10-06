@@ -1,0 +1,13 @@
+__pycache__
+
+.vscode
+
+venv
+
+.exe
+
+.bat
+
+.cfg
+
+.ps1
