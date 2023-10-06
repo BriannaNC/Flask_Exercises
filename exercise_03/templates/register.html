@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Register</h2>
+    <form method="post">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+        <label for="org">Organization:</label>
+        <select name="org" required>
+            <option value="" disabled selected>Select an organization</option>
+            {% for org in std_orgs %}
+                <option value="{{org}}">{{org}}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Register">
+    </form>
+    {% if error %}
+        <p class="error">{{error}}</p>
+    {% endif %}
+{% endblock %}
